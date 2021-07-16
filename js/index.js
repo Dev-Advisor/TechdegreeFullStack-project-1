@@ -25,7 +25,7 @@ const quotes=[
     source: "Ralph Waldo Emerson",
     quote: "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
     },
-  ]
+  ];
   
   function randomquote(quo){
   let quote_body=[];

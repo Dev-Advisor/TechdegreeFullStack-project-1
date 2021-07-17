@@ -31,19 +31,12 @@ let quotes = [
   
   ];
   
-  function getRandomQuote(quo){
-   let quoteBody = [];
-   let randomQuotes = Math.floor(Math.random() * quoteBody)
-   for (let i=0; i<quo.length; i+=1) {
-    quoteBody.push(quo[i].source);
-    quoteBody.push(quo[i].quote);
-    quoteBody.push(quo[i].citation);
-    quoteBody.push(quo[i].year);
-   }
-  return randomQuotes;
-  }
   
-  console.log(getRandomQuote(quotes))
+  
+quotes.forEach( quoute => {
+console.log(quote.source)
+
+})
 
 
 

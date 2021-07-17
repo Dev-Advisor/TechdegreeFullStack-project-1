@@ -46,20 +46,17 @@ function printQuote () {
  let randomQuote = getRandomQuote();
 
  let createQuote = `<p class="quote">${randomQuote.quote}</p>, 
-                   <p class="source">${randomQuote.source}</p>`,
+                    <p class="source">${randomQuote.source}</p>`,
 
-                      if(randomQuote === randomQuote.citation & randomQuote === randomQuote.year ){
+                      if (randomQuote === randomQuote.citation & randomQuote === randomQuote.year ){
                           `<p class="quote"> ${randomQuote.quote} </p>
                           <p class="source"> ${randomQuote.source}
                           <span class="citation"> ${randomQuote.citation} </span>
                           <span class="year">${randomQuote.year} </span>
                           </p>`;
-                          
-  document.getElementById('quote-box').innerHTML = createQuote; 
-
-};
+                          };
                     
- 
+document.getElementById('quote-box').innerHTML = createQuote; 
 
 };
 

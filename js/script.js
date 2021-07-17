@@ -11,7 +11,7 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 
-let quotes = [
+var quotes = [
   {
       source: "Oscar Wilde",
       quote: "Be yourself; everyone else is already taken",
@@ -33,10 +33,35 @@ let quotes = [
   
   
   
-quotes.forEach( quoute => {
-console.log(quote.source)
+function getRandomQuote () {
+let randomNumber = Math.floor(Math.random() * 3)
 
-})
+let qoute = quotes[randomNumber];
+
+return qoute
+
+};
+
+function printQuote () {
+ let randomQuote = getRandomQuote();
+
+ let createQuote = `<p class="quote">${randomQuote.quote}</p>, 
+                   <p class="source">${randomQuote.source}</p>`,
+
+                      if(randomQuote === randomQuote.citation & randomQuote === randomQuote.year ){
+                          `<p class="quote"> ${randomQuote.quote} </p>
+                          <p class="source"> ${randomQuote.source}
+                          <span class="citation"> ${randomQuote.citation} </span>
+                          <span class="year">${randomQuote.year} </span>
+                          </p>`;
+                          
+  document.getElementById('quote-box').innerHTML = createQuote; 
+
+};
+                    
+ 
+
+};
 
 
 

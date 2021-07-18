@@ -7,6 +7,8 @@ project 1 - A Random Quote Generator
   // Check the "Project Resources" section of the project instructions
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
+  
+
 /*** 
  * `quotes` array 
 ***/
@@ -31,7 +33,9 @@ var quotes = [
   
   ];
   
-  
+  /***
+ * `getRandomQuote` function
+***/
   
 function getRandomQuote () {
 let randomNumber = Math.floor(Math.random() * 3)
@@ -42,19 +46,26 @@ return qoute
 
 };
 
+/***
+ * `printQuote` function
+***/
+
 function printQuote () {
  let randomQuote = getRandomQuote();
-
- let createQuote = `<p class="quote">${randomQuote.quote}</p>, 
-                    <p class="source">${randomQuote.source}</p>`,
-
-                      if (randomQuote === randomQuote.citation & randomQuote === randomQuote.year ){
-                          `<p class="quote"> ${randomQuote.quote} </p>
+  let createQuote;
+      if (randomQuote === randomQuote.quote & randomQuote === randomQuote.source){
+              
+                   createQuote =  `<p class="quote">${randomQuote.quote}</p>, 
+                                   <p class="source">${randomQuote.source}</p>`,
+                     
+                   } else if(randomQuote === randomQuote.citation & randomQuote === randomQuote.year ) {
+                         createQuote = 
+                         `<p class="quote"> ${randomQuote.quote} </p>
                           <p class="source"> ${randomQuote.source}
                           <span class="citation"> ${randomQuote.citation} </span>
                           <span class="year">${randomQuote.year} </span>
                           </p>`;
-                          };
+                          }; 
                     
 document.getElementById('quote-box').innerHTML = createQuote; 
 
@@ -65,15 +76,11 @@ document.getElementById('quote-box').innerHTML = createQuote;
 
 
 
-/***
- * `getRandomQuote` function
-***/
 
 
 
-/***
- * `printQuote` function
-***/
+
+
 
 
 
@@ -82,4 +89,4 @@ document.getElementById('quote-box').innerHTML = createQuote;
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-//document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, false);

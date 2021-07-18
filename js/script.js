@@ -7,7 +7,7 @@ project 1 - A Random Quote Generator
   // Check the "Project Resources" section of the project instructions
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
-  
+
 
 /*** 
  * `quotes` array 
@@ -56,7 +56,7 @@ function printQuote () {
       if (randomQuote === randomQuote.quote & randomQuote === randomQuote.source){
               
                    createQuote =  `<p class="quote">${randomQuote.quote}</p>, 
-                                   <p class="source">${randomQuote.source}</p>`,
+                                   <p class="source">${randomQuote.source}</p>`
                      
                    } else if(randomQuote === randomQuote.citation & randomQuote === randomQuote.year ) {
                          createQuote = 

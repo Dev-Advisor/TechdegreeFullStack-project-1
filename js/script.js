@@ -57,17 +57,20 @@ function printQuote () {
               
                    createQuote =  `<p class="quote">${randomQuote.quote}</p>, 
                                    <p class="source">${randomQuote.source}</p>`
+
+                                   document.getElementById('quote-box').innerHTML = createQuote; 
                      
-                   } else if(randomQuote === randomQuote.citation & randomQuote === randomQuote.year ) {
-                         createQuote = 
-                         `<p class="quote"> ${randomQuote.quote} </p>
-                          <p class="source"> ${randomQuote.source}
-                          <span class="citation"> ${randomQuote.citation} </span>
-                          <span class="year">${randomQuote.year} </span>
-                          </p>`;
-                          }; 
-                    
-document.getElementById('quote-box').innerHTML = createQuote; 
+                                    } else if(randomQuote === randomQuote.citation & randomQuote === randomQuote.year ) {
+                                          createQuote = 
+                                          `<p class="quote"> ${randomQuote.quote} </p>
+                                            <p class="source"> ${randomQuote.source}
+                                            <span class="citation"> ${randomQuote.citation} </span>
+                                            <span class="year">${randomQuote.year} </span>
+                                            </p>`;
+                                            document.getElementById('quote-box').innerHTML = createQuote; 
+                                            }; 
+                                      
+
 
 };
 

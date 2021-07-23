@@ -12,7 +12,7 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
-
+// Quotes array of objects stores 6 quotes.
 var quotes = [
   {
       source: "Oscar Wilde",
@@ -52,12 +52,16 @@ var quotes = [
   
   /***
  * `getRandomQuote` function
+ *  getRandomQuote takes quotes array object and give a random quote
 ***/
-  
+
 function getRandomQuote () {
+// This varible stores a random number generator.
 let randomNumber = Math.floor(Math.random() * 6)
 
+//qoute varible stores quotes array and use randomNumber to generate a random quote.
 let qoute = quotes[randomNumber];
+
 
 return qoute
 
@@ -65,13 +69,19 @@ return qoute
 
 /***
  * `printQuote` function
+ printquote take RandomQuote and manipulates the data to print a random quote on the screen.
 ***/
 
 function printQuote () {
+//randomQuote store the random quote generater.
  let randomQuote = getRandomQuote();
-  let createQuote =  `<p class="quote">${randomQuote.quote}</p>, 
-                      <p class="source">${randomQuote.source}`
 
+ // createQuote combines randomQuote with html to generate a random quote on screen.
+  let createQuote =  `<p class="quote">${randomQuote.quote}</p>, 
+                      <p class="source">${randomQuote.source}</p>`
+
+
+  // If statments allow createQuote to have different meta data depending on what randomQuote generates.
    if(randomQuote.citation) {
       createQuote += `<span class="citation"> ${randomQuote.citation} </span>,`;
       }; 

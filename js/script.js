@@ -44,7 +44,7 @@ var quotes = [
   {
     source: "Martin Luther",
     quote: "I cannot and will not recant anything, for to go against conscience is neither right nor safe. Here I stand, I can do no other, so help me God. Amen.",
-    citation: "Where God Builds a Church, the Devil Builds a Chapel.",
+    citation: "Where God Builds a Church.",
     year: "1942"
   }
   
@@ -77,17 +77,17 @@ function printQuote () {
  let randomQuote = getRandomQuote();
 
  // createQuote combines randomQuote with html to generate a random quote on screen.
-  let createQuote =  `<p class="quote">${randomQuote.quote}</p>, 
+  let createQuote =  `<p class="quote">${randomQuote.quote}</p> 
                       <p class="source">${randomQuote.source}</p>`
 
 
   // If statments allow createQuote to have different meta data depending on what randomQuote generates.
    if(randomQuote.citation) {
-      createQuote += `<span class="citation"> ${randomQuote.citation} </span>,`;
+      createQuote += `<span class="citation"> ${randomQuote.citation} </span>`;
       }; 
 
   if(randomQuote.year) {
-       createQuote +=  `<span class="citation"> ${randomQuote.year} </span>,`;
+       createQuote +=  `<span class="citation"> ${randomQuote.year} </span>`;
        }; 
                                       
     document.getElementById('quote-box').innerHTML = createQuote; 
